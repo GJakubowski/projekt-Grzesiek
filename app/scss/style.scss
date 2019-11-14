@@ -1,0 +1,88 @@
+@import 'settings.scss';
+
+body {
+
+
+    .main-nav {
+        justify-content: flex-start;
+        background-color: $bg-color-nav;
+        width: 100%;
+        z-index: 1;
+        top: 0;
+
+        .main-nav-a {
+            color: white;
+        }
+    }
+
+    .main-title {
+        border: 1px solid black;
+        width: 35%;
+        margin: 4rem auto;
+        text-align: center;
+    }
+
+    #books {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 1rem;
+    }
+
+}
+
+.main-modal {
+    background-color: rgba(0, 0, 0, 0.4);
+
+    .main-modal-body {
+        display: grid;
+        grid-template-columns: auto;
+
+        .main-input {
+            border: none;
+            margin: 1rem;
+            border-bottom: 1px solid $bg-color-nav;
+
+            &:focus {
+                border-bottom: 1px solid red;
+            }
+
+        }
+    }
+}
+
+
+@media(min-width: 100px) and (max-width:593px) {
+    body {
+
+
+        .main-nav {
+            justify-content: flex-start;
+            background-color: $bg-color-nav-width-below-593;
+
+            .main-nav-a {
+                color: white;
+            }
+        }
+
+        .main-title {
+            border: 1px solid black;
+            width: 100%;
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        #books {
+            display: grid;
+            grid-template-columns: auto;
+        }
+    }
+}
+
+@media(min-width: 594px) and (max-width:992px) {
+    body {
+        #books {
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+    }
+}
