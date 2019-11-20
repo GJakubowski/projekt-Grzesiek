@@ -119,9 +119,6 @@ function editeBook(element) {
     // end footer -----------------------//
 
 
-
-
-
     // dodanie całości kontentu modala do jego głównego diva 
 
     // pierwsza częci uzupełnienie <div class="modal-content">
@@ -182,9 +179,6 @@ function saveBook(element) {
             getBooks()
 
         })
-
-
-
 
 
 }
@@ -265,10 +259,6 @@ function addBook() {
     modalFooter.appendChild(footerBtnClose)
     modalFooter.appendChild(footerBtnSave)
     // end footer -----------------------//
-
-
-
-
 
     // dodanie całości kontentu modala do jego głównego diva 
 
