@@ -8,7 +8,6 @@ function getBooks() {
         .then(books => {
             books.forEach(element => {
 
-
                 const card = createdEl('div', 'class', 'card main-card', '')
                 const cardBody = createdEl('div', 'class', 'card-body', '')
                 const cardH5 = createdEl('h5', 'class', 'card-title', element.title)
@@ -34,7 +33,6 @@ function getBooks() {
             });
         })
 }
-
 
 getBooks()
 
@@ -135,10 +133,7 @@ function editeBook(element) {
 
     modalDiv.appendChild(modalDialog)
     modalDiv.style.display = 'block'
-    console.log("TCL: editeBook -> modalDiv", modalDiv)
     booksId.appendChild(modalDiv)
-
-
 
 }
 
@@ -150,7 +145,6 @@ function deleteBook(book) {
             },
         })
         .then(res => {
-            console.log(res)
             getBooks()
         })
         .catch(err => {
@@ -159,11 +153,11 @@ function deleteBook(book) {
 }
 
 function saveBook(element) {
-    console.log(element.id)
+
     element.title = document.getElementById('title').value
     element.author = document.getElementById('author').value
     element.description = document.getElementById('description').value
-    console.log("TCL: saveBook -> element", element)
+
 
     const params = {
         method: 'PUT', // Method itself
@@ -177,10 +171,7 @@ function saveBook(element) {
         .then(res => {
             closeModal()
             getBooks()
-
         })
-
-
 }
 
 function closeModal() {
@@ -225,7 +216,6 @@ function addBook() {
     const inputAuthor = createdEl('input', 'class', 'main-input', '')
     inputAuthor.setAttribute('placeholder', 'Wpisz autora')
     inputAuthor.setAttribute('id', 'author')
-
     const textareaDescription = createdEl('textarea', 'class', 'main-input', '')
     textareaDescription.setAttribute('placeholder', 'Wpisz opis')
     textareaDescription.setAttribute('rows', '6')
@@ -276,7 +266,6 @@ function addBook() {
 
     modalDiv.appendChild(modalDialog)
     modalDiv.style.display = 'block'
-    console.log("TCL: editeBook -> modalDiv", modalDiv)
     booksId.appendChild(modalDiv)
 
 }
